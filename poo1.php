@@ -1,6 +1,7 @@
 <?php
 
 class Formateur{
+   
     //properties 
    public $nom = "Ganesh";
    public $age = 52;
