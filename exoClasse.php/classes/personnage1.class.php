@@ -1,5 +1,5 @@
 <?php
-class Personnage1
+class Personnage2
 {
     public $nom;
     public $age;
