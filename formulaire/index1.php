@@ -33,5 +33,30 @@
             <input type="submit" value="ENVOYER">
         </p>
     </form>
+    <!-- <big>hello </big>
+    <big>hello </big>
+    <big>hello </big>
+    <big>hello </big>
+       <center>hello</center>  -->
+    
+    <?php 
+    include "process.php"; 
+
+
+    $db = new Database();
+
+    $name = $_POST['nom'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $password_hash = password_hash($password,PASSWORD_BCRYPT);
+
+
+    if (isset($name) && isset($email) && isset($password)) {
+            $query = "INSERT INTO register (name,email, password) VALUES ('$name', '$email', '$password_hash')";
+            
+        $db->insert($query);
+    }
+    ?>
+   
 </body>
 </html>
