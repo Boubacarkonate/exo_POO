@@ -15,7 +15,7 @@ class Personnage1
     public $sexe;
     public $experience;
 
-    public function __construct($nom, $age, $img, $sexe, $experience)
+    public function __construct($nom, $age, $img, $sexe, $experience)       //Cette méthode est très utile pour initialiser les valeurs dont un objet a besoin dès sa création et avant toute utilisation de celui-ci.
     {
         $this->nom = $nom;
         $this->age = $age;
@@ -55,7 +55,7 @@ $perso1->afficher_info_template();
 $perso2 = new Personnage1("Patricia", 45, "b.PNG", false, 15);
 $perso2->afficher_info_template();
 
-echo $perso1;     // fonctionne avec la méthode magique __tostring     
+echo $perso1;     // fonctionne avec la méthode magique __tostring. Elle traite un objet comme une chaine de caractères
 
 
 ?>
